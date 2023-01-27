@@ -14,7 +14,6 @@ export class UserController {
     try {
       return this.userService.getAllUsers({});
     } catch (error: any) {
-      console.error(error);
       throw new Error(error);
     }
   }
@@ -30,7 +29,6 @@ export class UserController {
         return user;
       }
     } catch (error: any) {
-      console.error(error);
       throw new Error(error);
     }
   }
@@ -46,7 +44,6 @@ export class UserController {
         return user;
       }
     } catch (error: any) {
-      console.error(error);
       throw new Error(error);
     }
   }
@@ -57,7 +54,6 @@ export class UserController {
       this.userService.createUser(UserDto);
       return 'Usuário criado';
     } catch (err: any) {
-      console.error(err);
       throw new Error(err);
     }
   }
@@ -67,7 +63,6 @@ export class UserController {
     try {
       return this.userService.deleteUser({ id: Number(id) });
     } catch (err: any) {
-      console.error(err);
       throw new Error(err);
     }
   }

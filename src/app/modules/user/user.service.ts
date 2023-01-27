@@ -43,7 +43,9 @@ export class UserService {
     return users.map((user) => excludeFields(user, ['password']));
   }
 
-  async createUser(createUserDto: CreateUserDto): Promise<User> {
+  async createUser(
+    createUserDto: CreateUserDto & { password?: string },
+  ): Promise<Omit<User, 'password'>> {
     return this.prisma.user.create({
       data: {
         email: createUserDto.email,

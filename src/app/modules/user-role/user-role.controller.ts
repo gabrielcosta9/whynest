@@ -13,7 +13,6 @@ export class UserRolesController {
     try {
       return this.roleService.getAllUserRoles({});
     } catch (error: any) {
-      console.error(error);
       throw new Error(error);
     }
   }
@@ -27,7 +26,6 @@ export class UserRolesController {
         return role;
       }
     } catch (error: any) {
-      console.error(error);
       throw new Error(error);
     }
   }
@@ -43,7 +41,6 @@ export class UserRolesController {
         return role;
       }
     } catch (error: any) {
-      console.error(error);
       throw new Error(error);
     }
   }
@@ -53,7 +50,6 @@ export class UserRolesController {
     try {
       return this.roleService.deleteUserRole({ id: Number(id) });
     } catch (error: any) {
-      console.error(error);
       throw new Error(error);
     }
   }
